@@ -10,37 +10,4 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 var marker = L.marker([41.386977, 2.166005]).addTo(mymap);
 
-// var circle = L.circle([41.386977, 2.166005], {
-//     color: 'red',
-//     fillColor: '#f03',
-//     fillOpacity: 0.5,
-//     radius: 20
-// }).addTo(mymap);
-
-// var polygon = L.polygon([
-//     [41.386977, 2.166005],
-//     [41.39, 2.166005],
-//     [41.39, 2.167],
-//     [41.386977, 2.167]
-// ]).addTo(mymap);
-
 marker.bindPopup("<b>Restaurant Centfocs</b><br>Restaurante mediterráneo<br> Carrer de Balmes, 16, 08007 Barcelona");
-// circle.bindPopup("I am a circle.");
-// polygon.bindPopup("I am a polygon.");
-
-// var popup = L.popup()
-//     .setLatLng([41.386977, 2.166005])
-//     .setContent("<b>Restaurant Centfocs</b><br>Restaurante mediterráneo<br> Carrer de Balmes, 16, 08007 Barcelona")
-//     .openOn(mymap);
-
-
-var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
-}
-
-mymap.on('click', onMapClick);
